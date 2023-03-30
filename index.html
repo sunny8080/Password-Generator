@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator | Sunny</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+
+        <!-- meta tags -->
+        <!-- Twitter -->
+        <meta name="twitter:card" content="clone" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:creator" content="@" />
+        <meta name="twitter:title" content="Password Generator - By Sunny" />
+        <meta name="twitter:description" content="Basic Password Generator Using HTML, CSS and JavaScript" />
+        <meta name="twitter:image" content="https://i.postimg.cc/ryjwsVnQ/pass.jpg" />
+
+        <!-- Facebook -->
+        <meta property="og:url" content="URL" />
+        <meta property="og:title" content="Password Generator - By Sunny" />
+        <meta property="og:description" content="Basic Password Generator Using HTML, CSS and JavaScript" />
+        <meta property="og:type" content="clone-website" />
+        <meta property="og:image" content="https://i.postimg.cc/ryjwsVnQ/pass.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
+
+        <!-- google font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap" rel="stylesheet" />
+
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/0c0f21fd16.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <h1 class="heading">Password Generator</h1>
+
+                <div class="display-container">
+                    <input class="display" readonly placeholder="Password" type="text" />
+
+                    <button class="copyBtn">
+                        <span class="tooltip" copyMsg></span>
+                        <img width="23px" height="23px" src="./image/copy.svg" alt="copy" />
+                    </button>
+                </div>
+
+                <div class="input-container">
+                    <!-- Password length section -->
+                    <div class="length-container">
+                        <p>Password Length</p>
+                        <p data-lengthNumber>10</p>
+                    </div>
+
+                    <!-- slider -->
+                    <input class="slider" type="range" min="1" max="20" step="1" />
+
+                    <!-- checkboxes -->
+                    <div>
+                        <div class="check">
+                            <input id="uppercase" type="checkbox" checked />
+                            <label for="uppercase">Include Uppercase Letters</label>
+                        </div>
+
+                        <div class="check">
+                            <input id="lowercase" type="checkbox" />
+                            <label for="lowercase">Include Lowercase Letters</label>
+                        </div>
+
+                        <div class="check">
+                            <input id="numbers" type="checkbox" />
+                            <label for="numbers">Include Numbers</label>
+                        </div>
+
+                        <div class="check">
+                            <input id="symbols" type="checkbox" />
+                            <label for="symbols">Include Symbols</label>
+                        </div>
+                    </div>
+
+                    <!-- strength section -->
+                    <div class="strength-container">
+                        <p>Strength</p>
+                        <div class="indicator"></div>
+                    </div>
+
+                    <!-- generate button -->
+                    <button class="generateBtn">Generate Password</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
